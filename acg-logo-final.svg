@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&amp;display=swap');
+    </style>
+
+    <!-- Blueprint grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(26,26,24,0.06)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Noise texture filter -->
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" result="noiseOut"/>
+      <feColorMatrix type="saturate" values="0" in="noiseOut" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="blended"/>
+      <feComposite in="blended" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#F5EDD8"/>
+
+  <!-- Blueprint grid overlay -->
+  <rect width="800" height="800" fill="url(#grid)"/>
+
+  <!-- Outer border frame -->
+  <rect x="32" y="32" width="736" height="736" fill="none" stroke="#1A1A18" stroke-width="1.5"/>
+
+  <!-- Inner border frame -->
+  <rect x="48" y="48" width="704" height="704" fill="none" stroke="#1A1A18" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Registration marks — corners -->
+  <!-- Top-left -->
+  <line x1="32" y1="80" x2="80" y2="80" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+  <line x1="80" y1="32" x2="80" y2="80" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Top-right -->
+  <line x1="720" y1="80" x2="768" y2="80" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+  <line x1="720" y1="32" x2="720" y2="80" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Bottom-left -->
+  <line x1="32" y1="720" x2="80" y2="720" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+  <line x1="80" y1="720" x2="80" y2="768" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Bottom-right -->
+  <line x1="720" y1="720" x2="768" y2="720" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+  <line x1="720" y1="720" x2="720" y2="768" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Crosshair center marks -->
+  <line x1="400" y1="32" x2="400" y2="60" stroke="#1A1A18" stroke-width="0.75" opacity="0.35"/>
+  <line x1="400" y1="740" x2="400" y2="768" stroke="#1A1A18" stroke-width="0.75" opacity="0.35"/>
+  <line x1="32" y1="400" x2="60" y2="400" stroke="#1A1A18" stroke-width="0.75" opacity="0.35"/>
+  <line x1="740" y1="400" x2="768" y2="400" stroke="#1A1A18" stroke-width="0.75" opacity="0.35"/>
+
+  <!-- Measurement annotation lines — horizontal -->
+  <line x1="120" y1="258" x2="680" y2="258" stroke="#1A1A18" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.25"/>
+  <line x1="120" y1="542" x2="680" y2="542" stroke="#1A1A18" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.25"/>
+
+  <!-- Measurement annotation — vertical ticks -->
+  <line x1="100" y1="258" x2="100" y2="542" stroke="#1A1A18" stroke-width="0.5" opacity="0.3"/>
+  <line x1="96" y1="258" x2="104" y2="258" stroke="#1A1A18" stroke-width="1" opacity="0.4"/>
+  <line x1="96" y1="542" x2="104" y2="542" stroke="#1A1A18" stroke-width="1" opacity="0.4"/>
+
+  <!-- Measurement label -->
+  <text x="78" y="403" font-family="'Space Mono', monospace" font-size="8" fill="#8A8A7A" letter-spacing="0.08em" text-anchor="middle" transform="rotate(-90, 78, 403)">284px</text>
+
+  <!-- Orange shadow / offset block for ACG -->
+  <text x="407" y="520" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="284" font-weight="700" fill="#F5621E" letter-spacing="-0.04em">ACG</text>
+
+  <!-- Teal accent shadow (slight offset) -->
+  <text x="403" y="516" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="284" font-weight="700" fill="#2ABFBF" letter-spacing="-0.04em" opacity="0.18">ACG</text>
+
+  <!-- Main ACG letterform — dark ink -->
+  <text x="400" y="512" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="284" font-weight="700" fill="#1A1A18" letter-spacing="-0.04em">ACG</text>
+
+  <!-- Virgil-style quotation marks -->
+  <text x="133" y="310" font-family="'Space Mono', monospace" font-size="72" font-weight="700" fill="#F5621E" opacity="0.9">"</text>
+  <text x="640" y="610" font-family="'Space Mono', monospace" font-size="72" font-weight="700" fill="#F5621E" opacity="0.9">"</text>
+
+  <!-- Top label — annotation style -->
+  <text x="400" y="232" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#8A8A7A" letter-spacing="0.15em">ARIEL C. GUEVARA — PORTFOLIO</text>
+
+  <!-- Bottom annotation row -->
+  <line x1="212" y1="572" x2="588" y2="572" stroke="#1A1A18" stroke-width="0.75" opacity="0.5"/>
+  <text x="400" y="590" text-anchor="middle" font-family="'Space Mono', monospace" font-size="8" fill="#8A8A7A" letter-spacing="0.12em">DESIGN · PHOTOGRAPHY · CREATIVE DIRECTION</text>
+
+  <!-- Bottom-right coordinate stamp -->
+  <text x="680" y="752" font-family="'Space Mono', monospace" font-size="8" fill="#8A8A7A" letter-spacing="0.08em" text-anchor="end" opacity="0.6">v1.0 / 2025</text>
+
+  <!-- Top-left coordinate stamp -->
+  <text x="120" y="752" font-family="'Space Mono', monospace" font-size="8" fill="#8A8A7A" letter-spacing="0.08em" opacity="0.6">© ACG</text>
+
+  <!-- Noise overlay -->
+  <rect width="800" height="800" fill="rgba(245,237,216,0.15)" filter="url(#noise)" opacity="0.4"/>
+</svg>

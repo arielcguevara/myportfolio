@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+
+  <!-- Background -->
+  <rect width="64" height="64" fill="#F5EDD8"/>
+
+  <!-- A — top-left, dark ink -->
+  <text x="2" y="30" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A18" letter-spacing="-0.05em">A</text>
+
+  <!-- C — center, orange -->
+  <text x="16" y="46" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#F5621E" letter-spacing="-0.05em">C</text>
+
+  <!-- G — bottom-right, layered over C, teal -->
+  <text x="30" y="62" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#2ABFBF" letter-spacing="-0.05em">G</text>
+
+  <!-- Thin outer border -->
+  <rect x="1" y="1" width="62" height="62" fill="none" stroke="#1A1A18" stroke-width="1.5"/>
+
+</svg>
